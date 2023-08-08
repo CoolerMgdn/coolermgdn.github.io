@@ -1,0 +1,867 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+/* Обнуление */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 16px;
+  background-color: #2B2C3A;
+  color: #fff;
+  font-family: Jost;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+
+/*-----------------------*/
+.leftbar {
+  z-index: 11;
+  position: fixed;
+  height: 100%;
+  width: 280px;
+  background: #343646;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  overflow-y: scroll;
+}
+
+.leftbar .logo {
+  position: fixed;
+  background: #343646;
+  z-index: 15;
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 7px;
+  width: 280px;
+  height: 70px;
+  border-bottom: 1px solid rgba(216, 216, 216, 0.1);
+}
+
+.leftbar .leftbarMenu {
+  padding: 100px 30px 4px 30px;
+}
+
+.leftbar .leftbarMenu p, .leftbar .leftbarMenu .programms, .leftbar .leftbarMenu .lectures {
+  opacity: 0.5;
+}
+
+.leftbar .leftbarMenu p:hover, .leftbar .leftbarMenu .programms:hover, .leftbar .leftbarMenu .lectures:hover {
+  opacity: 1;
+}
+
+.leftbar ul, .leftbar a, .leftbar p, .leftbar .programms, .leftbar .lectures {
+  cursor: pointer;
+}
+
+.leftbar #programms,
+.leftbar #lectures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.leftbar .menuClose {
+  display: none !important;
+  list-style: none;
+}
+
+.leftbar p, .leftbar .programms, .leftbar .lectures {
+  margin-bottom: 16px;
+}
+
+.leftbar .menuToggle {
+  background: none;
+  cursor: pointer;
+}
+
+.leftbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: -30px;
+  margin-right: -30px;
+  margin-bottom: 16px;
+  width: 280px;
+}
+
+.leftbar ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  opacity: 0.5;
+}
+
+.leftbar ul li:hover {
+  background: rgba(255, 255, 255, 0.03);
+  opacity: 1;
+}
+
+.leftbar ul li:hover .selectLine {
+  opacity: 1;
+}
+
+.leftbar ul li:hover svg path {
+  opacity: 1;
+  fill: #6F6EFF;
+}
+
+.leftbar ul li span {
+  margin-left: 24px;
+}
+
+.leftbar ul li .selectLine {
+  width: 3px;
+  height: 100%;
+  background: #000;
+  margin-right: 47px;
+  background: #6F6EFF;
+  -webkit-box-shadow: 0px 0px 12px rgba(111, 110, 255, 0.5);
+          box-shadow: 0px 0px 12px rgba(111, 110, 255, 0.5);
+  opacity: 0;
+}
+
+.leftbar .mailing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: auto;
+  line-height: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+.leftbar .mailing span {
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+.leftbar .mailing .mailingSwitch {
+  cursor: pointer;
+}
+
+.leftbar .switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 22px;
+}
+
+.leftbar .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.leftbar .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 16px;
+}
+
+.leftbar .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.leftbar .switch input:checked + .slider {
+  opacity: 1;
+}
+
+.leftbar .switch input:checked + .slider:before {
+  -webkit-transform: translateX(19px);
+  transform: translateX(19px);
+  opacity: 1;
+  background: #6F6EFF;
+  -webkit-box-shadow: 0px 0px 12px rgba(111, 110, 255, 0.5);
+          box-shadow: 0px 0px 12px rgba(111, 110, 255, 0.5);
+}
+
+.hLine {
+  width: 100%;
+  height: 1px;
+  background: #D8D8D8;
+  opacity: 0.1;
+}
+
+.topbar {
+  z-index: 10;
+  background-color: #2B2C3A;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid rgba(216, 216, 216, 0.1);
+}
+
+.topbar .logoMobile {
+  display: none;
+}
+
+.topbar .information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 280px;
+  font-size: 14px;
+  line-height: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.topbar .information p {
+  margin-right: 28px;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.topbar .information p:hover {
+  opacity: 1;
+}
+
+.topbar .information .vLine {
+  width: 1px;
+  height: 24px;
+  background: #D8D8D8;
+  opacity: 0.1;
+}
+
+.topbar .personal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.topbar .personal .achieves {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 13px;
+  line-height: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 4px;
+}
+
+.topbar .personal .achieves .energy {
+  padding-left: 3px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.topbar .personal .achieves .energy span {
+  padding-left: 10px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+}
+
+.topbar .personal .achieves p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 5px;
+  height: 24px;
+  margin-right: 10px;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.topbar .personal .avatar {
+  width: 44px;
+  height: 44px;
+}
+
+.topbar .personal .account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-left: 13px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 10px;
+}
+
+.topbar .personal .account .online {
+  font-weight: 600;
+  font-size: 13px;
+  color: #24CB8D;
+  padding-left: 4px;
+}
+
+.topbar .personal .status {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 4px;
+  height: 14px;
+  margin-top: 8px;
+  margin-left: 15px;
+}
+
+.topbar .personal .pro {
+  background: -webkit-gradient(linear, left top, right top, from(#6B69F9), to(#6F6EFF));
+  background: linear-gradient(90deg, #6B69F9 0%, #6F6EFF 100%);
+  -webkit-box-shadow: 0px 0px 12px rgba(111, 110, 255, 0.5);
+          box-shadow: 0px 0px 12px rgba(111, 110, 255, 0.5);
+}
+
+.content {
+  padding-top: 110px;
+  padding-left: 335px;
+  padding-right: 55px;
+}
+
+.content .course {
+  padding-bottom: 60px;
+}
+
+.content .course .courseText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.content .course .courseText .courseInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-transform: uppercase;
+}
+
+.content .course .courseText .courseInfo .level {
+  font-size: 11px;
+  line-height: 16px;
+  margin-bottom: 7px;
+  opacity: 0.4;
+}
+
+.content .course .courseText .courseInfo .title {
+  font-size: 22px;
+  line-height: 18px;
+}
+
+.content .course .courseText .lessons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  line-height: 17px;
+  cursor: pointer;
+}
+
+.content .course .courseText .lessons #showAll1 {
+  cursor: pointer;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.content .course .courseText .lessons #showAll1:checked #courseList1 {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.content .course .courseText .lessons .lessonsAll {
+  background: -webkit-gradient(linear, left top, right top, from(#6B69F9), to(#6F6EFF));
+  background: linear-gradient(90deg, #6B69F9 0%, #6F6EFF 100%);
+  border-radius: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.content .course .courseText .lessons .lessonsAll:hover {
+  color: #6F6EFF;
+  background: #fff;
+}
+
+.content .course .courseText .lessons .prev,
+.content .course .courseText .lessons .next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  mix-blend-mode: normal;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  height: 30px;
+  width: 30px;
+  margin-left: 5px;
+}
+
+.content .course .courseText .lessons .prev:hover,
+.content .course .courseText .lessons .next:hover {
+  background: #6F6EFF;
+}
+
+.content .course .courseList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  margin-left: -4px;
+}
+
+.content .course .courseList .lesson {
+  background: rgba(255, 255, 255, 0.04);
+  width: 255px;
+  height: 294px;
+  border-radius: 6px;
+  margin: 4px;
+}
+
+.content .course .courseList .lesson:first-child {
+  margin-left: 0;
+}
+
+.content .course .courseList .lesson .lessonWrapper {
+  height: 144px;
+}
+
+.content .course .courseList .lesson .lessonWrapper img {
+  border-radius: 6px 6px 0px 0px;
+}
+
+.content .course .courseList .lesson .lessonType {
+  position: relative;
+  width: 50px;
+  background: -webkit-gradient(linear, left top, right top, from(#6B69F9), to(#6F6EFF));
+  background: linear-gradient(90deg, #6B69F9 0%, #6F6EFF 100%);
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 12px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-left: 20px;
+  margin-top: -274px;
+}
+
+.content .course .courseList .lesson .lessonContainer {
+  margin: 15px 15px 15px 15px;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content .course .courseList .lesson .lessonContainer .lessonText .title {
+  font-size: 16px;
+  line-height: 12px;
+}
+
+.content .course .courseList .lesson .lessonContainer .lessonText .description {
+  font-size: 14px;
+  line-height: 18px;
+  opacity: 0.5;
+  mix-blend-mode: normal;
+  margin-top: 10px;
+}
+
+.content .course .courseList .lesson .lessonContainer .interaction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 13px;
+  line-height: 10px;
+}
+
+.content .course .courseList .lesson .lessonContainer .interaction .watch {
+  background: -webkit-gradient(linear, left top, right top, from(#6B69F9), to(#6F6EFF));
+  background: linear-gradient(90deg, #6B69F9 0%, #6F6EFF 100%);
+  border-radius: 4px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.content .course .courseList .lesson .lessonContainer .interaction .watch:hover {
+  color: #6F6EFF;
+  background: #fff;
+}
+
+.content .course .courseList .lesson .hLine {
+  position: relative;
+  width: 255px;
+  bottom: 60px;
+}
+
+.dropdown .programms, .dropdown .lectures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dropdown input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.dropdown ul {
+  display: none;
+}
+
+.dropdown :checked ~ label i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.dropdown :checked ~ ul {
+  display: inline-block;
+}
+
+@media screen and (max-width: 1100px) {
+  .topbar > .personal > .achieves {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .mobileShow {
+    display: block !important;
+  }
+  .leftbar {
+    display: none;
+  }
+  .content {
+    padding-top: 90px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .logoMobile {
+    display: block !important;
+    border: none;
+    width: 200px;
+  }
+  .topbar {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  .topbar > .achieves,
+  .topbar > .information,
+  .topbar > .personal {
+    display: none !important;
+  }
+  .hamburger-menu {
+    display: block !important;
+  }
+  .level {
+    font-size: 10px !important;
+  }
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.menu__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: -6px;
+  left: 0px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+}
+
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 70px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #343646;
+  -webkit-transition-duration: .25s;
+  transition-duration: .25s;
+}
+
+.menu__box .leftbarMenu {
+  padding: 10px 15px 4px 15px;
+}
+
+.menu__box .leftbarMenu .dropdown {
+  margin-top: -20px;
+}
+
+.menu__box .leftbarMenu .dropdown .lecturesMenu,
+.menu__box .leftbarMenu .dropdown .programmsMenu {
+  margin-left: -15px;
+  margin-right: -15px;
+  width: 100vw;
+}
+
+.menu__box .mailing {
+  padding: 10px 15px 4px 15px;
+  margin-bottom: 100px;
+}
+
+.menu__box .achieves p {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  white-space: nowrap;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  font-size: 11px;
+}
+
+.menu__box .information,
+.menu__box .personal {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.menu__box .information .account p,
+.menu__box .personal .account p {
+  margin-bottom: 5px;
+}
+
+.menu__box .information .status,
+.menu__box .personal .status {
+  margin-right: 15px;
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+}
+
+.menu__item :hover {
+  background-color: #CFD8DC;
+}
+/*# sourceMappingURL=style.css.map */
