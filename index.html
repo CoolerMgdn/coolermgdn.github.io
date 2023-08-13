@@ -6,6 +6,30 @@
   <link rel="stylesheet" href="/src/style.css">
 
 </head>
+
+<div class="header">
+  
+  <div class="header-menu">
+   <a class="menu-link is-active" href="#">Главная страница</a>
+   <a class="menu-link " href="#">Комната 1</a>
+   <a class="menu-link" href="#">Комната 2</a>
+  </div>
+  <div class="search-bar">
+   <input type="text" placeholder="ChatGPT">
+  </div>
+  <div class="header-profile">
+  <a class="wiki" href="#">
+    <img src="/src/icons/wiki.svg"></img>
+  </a>
+  <a class="questions" href="#">
+    <img src="/src/icons/qa.svg"></img>
+  </a>
+   <div class="time">
+    <span>Чт, 27 июля <b>13:10</b></span>
+   </div>
+  </div>
+ </div>
+
 <body>
 <!-- partial:index.partial.html -->
 <div class="grid">
@@ -75,10 +99,9 @@
   </div>
 
   <div class="grid-item item-4">
+
     <div class="grid_header">Гостинная</div>
-
     <div class="room_line">
-
       <div class="temp_props props">
         <div class="temp_prop temp">
           <img src="/src/icons/mdi_temperature.svg"></img>
@@ -127,6 +150,142 @@
 
       <div class="room_prop room_light">
         <span class="room_prop_header">Свет</span>
+
+        <div class="lightswitch_container">
+          <div class="room_device lightswitch device_on">
+            <div class="device_value">
+              <img src="/src/icons/healthicons_electricity-outline.svg"></img>
+              <span>Свет 1</span>
+            </div>
+            <div class="light_slider">
+              <img src="/src/icons/iconoir_sun-light.svg"></img>
+              <input type="range" min="0" max="100" name="" id="">
+              <img src="/src/icons/iconoir_sun-light-1.svg"></img>
+            </div>
+          </div>
+          <div class="room_device lightswitch device_off">
+            <div class="device_value">
+              <img src="/src/icons/healthicons_electricity-outline.svg"></img>
+              <span>Свет 2</span>
+            </div>
+            <div class="light_slider">
+              <img src="/src/icons/iconoir_sun-light.svg"></img>
+              <input type="range" min="0" max="100" value="0" name="" id="">
+              <img src="/src/icons/iconoir_sun-light-1.svg"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="grid_header">Кухня</div>
+    <div class="room_line">
+      <div class="temp_props props">
+        <div class="temp_prop temp">
+          <img src="/src/icons/mdi_temperature.svg"></img>
+          <span>28.7</span>
+        </div>
+        <div class="temp_prop humidity">
+          <img src="/src/icons/humidity.svg" ></img>
+          <span>65.4%</span>
+        </div>
+        <div class="temp_prop co2">
+          <img src="/src/icons/material-symbols_cloud.svg"></img>
+          <span>615 ppm</span>
+        </div>
+        <div class="temp_prop power">
+          <img src="/src/icons/Frame 22361.svg"></img>
+          <span>4W</span>
+        </div>
+        <div class="temp_prop light">
+          <img src="/src/icons/healthicons_electricity-outline.svg"></img>
+          <span>0W</span>
+        </div>
+      </div>
+
+      <div class="room_prop room_temp">
+        <span class="room_prop_header">Температура</span>
+        <div class="room_device conditioner device_off">
+          <div class="device_value">
+            <img src="/src/icons/mdi_temperature.svg"></img>
+            <input type="text">
+          </div>
+          <span>Кондиционер</span>
+          <a href="#">ВЫКЛ</a>
+        </div>
+      </div>
+
+
+
+      <div class="room_prop room_light">
+        <span class="room_prop_header">Свет</span>
+
+        <div class="lightswitch_container">
+          <div class="room_device lightswitch device_on">
+            <div class="device_value">
+              <img src="/src/icons/healthicons_electricity-outline.svg"></img>
+              <span>Свет 1</span>
+            </div>
+            <div class="light_slider">
+              <img src="/src/icons/iconoir_sun-light.svg"></img>
+              <input type="range" min="0" max="100" name="" id="">
+              <img src="/src/icons/iconoir_sun-light-1.svg"></img>
+            </div>
+          </div>
+          <div class="room_device lightswitch device_off">
+            <div class="device_value">
+              <img src="/src/icons/healthicons_electricity-outline.svg"></img>
+              <span>Свет 2</span>
+            </div>
+            <div class="light_slider">
+              <img src="/src/icons/iconoir_sun-light.svg"></img>
+              <input type="range" min="0" max="100" value="0" name="" id="">
+              <img src="/src/icons/iconoir_sun-light-1.svg"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid_header">Спальня</div>
+    <div class="room_line">
+      <div class="temp_props props">
+        <div class="temp_prop temp">
+          <img src="/src/icons/mdi_temperature.svg"></img>
+          <span>28.7</span>
+        </div>
+        <div class="temp_prop humidity">
+          <img src="/src/icons/humidity.svg" ></img>
+          <span>65.4%</span>
+        </div>
+        <div class="temp_prop co2">
+          <img src="/src/icons/material-symbols_cloud.svg"></img>
+          <span>615 ppm</span>
+        </div>
+        <div class="temp_prop power">
+          <img src="/src/icons/Frame 22361.svg"></img>
+          <span>4W</span>
+        </div>
+        <div class="temp_prop light">
+          <img src="/src/icons/healthicons_electricity-outline.svg"></img>
+          <span>0W</span>
+        </div>
+      </div>
+
+      <div class="room_prop room_temp">
+        <span class="room_prop_header">Температура</span>
+        <div class="room_device conditioner device_off">
+          <div class="device_value">
+            <img src="/src/icons/mdi_temperature.svg"></img>
+            <input type="text">
+          </div>
+          <span>Кондиционер</span>
+          <a href="#">ВЫКЛ</a>
+        </div>
+      </div>
+
+      <div class="room_prop room_extractor">
+        <span class="room_prop_header">Воздух</span>
         <div class="room_device conditioner device_on">
           <div class="device_value">
             <img src="/src/icons/material-symbols_cloud.svg"></img>
@@ -136,8 +295,191 @@
         </div>
       </div>
 
+      <div class="room_prop room_light">
+        <span class="room_prop_header">Свет</span>
+
+        <div class="lightswitch_container">
+          <div class="room_device lightswitch device_on">
+            <div class="device_value">
+              <img src="/src/icons/healthicons_electricity-outline.svg"></img>
+              <span>Свет 1</span>
+            </div>
+            <div class="light_slider">
+              <img src="/src/icons/iconoir_sun-light.svg"></img>
+              <input type="range" min="0" max="100" name="" id="">
+              <img src="/src/icons/iconoir_sun-light-1.svg"></img>
+            </div>
+          </div>
+          <div class="room_device lightswitch device_off">
+            <div class="device_value">
+              <img src="/src/icons/healthicons_electricity-outline.svg"></img>
+              <span>Свет 2</span>
+            </div>
+            <div class="light_slider">
+              <img src="/src/icons/iconoir_sun-light.svg"></img>
+              <input type="range" min="0" max="100" value="0" name="" id="">
+              <img src="/src/icons/iconoir_sun-light-1.svg"></img>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
+
+    <div class="grid_header">Комната 1</div>
+    <div class="room_line">
+      <div class="temp_props props">
+        <div class="temp_prop temp">
+          <img src="/src/icons/mdi_temperature.svg"></img>
+          <span>28.7</span>
+        </div>
+        <div class="temp_prop humidity">
+          <img src="/src/icons/humidity.svg" ></img>
+          <span>65.4%</span>
+        </div>
+        <div class="temp_prop co2">
+          <img src="/src/icons/material-symbols_cloud.svg"></img>
+          <span>615 ppm</span>
+        </div>
+        <div class="temp_prop power">
+          <img src="/src/icons/Frame 22361.svg"></img>
+          <span>4W</span>
+        </div>
+        <div class="temp_prop light">
+          <img src="/src/icons/healthicons_electricity-outline.svg"></img>
+          <span>0W</span>
+        </div>
+      </div>
+
+      <div class="room_prop room_temp">
+        <span class="room_prop_header">Температура</span>
+        <div class="room_device conditioner device_off">
+          <div class="device_value">
+            <img src="/src/icons/mdi_temperature.svg"></img>
+            <input type="text">
+          </div>
+          <span>Кондиционер</span>
+          <a href="#">ВЫКЛ</a>
+        </div>
+      </div>
+
+      <div class="room_prop room_extractor">
+        <span class="room_prop_header">Воздух</span>
+        <div class="room_device conditioner device_on">
+          <div class="device_value">
+            <img src="/src/icons/material-symbols_cloud.svg"></img>
+          </div>
+          <span>Вытяжка</span>
+          <a href="#">ВКЛ</a>
+        </div>
+      </div>
+
+      <div class="room_prop room_light">
+        <span class="room_prop_header">Свет</span>
+
+        <div class="lightswitch_container">
+          <div class="room_device lightswitch device_on">
+            <div class="device_value">
+              <img src="/src/icons/healthicons_electricity-outline.svg"></img>
+              <span>Свет 1</span>
+            </div>
+            <div class="light_slider">
+              <img src="/src/icons/iconoir_sun-light.svg"></img>
+              <input type="range" min="0" max="100" name="" id="">
+              <img src="/src/icons/iconoir_sun-light-1.svg"></img>
+            </div>
+          </div>
+          <div class="room_device lightswitch device_off">
+            <div class="device_value">
+              <img src="/src/icons/healthicons_electricity-outline.svg"></img>
+              <span>Свет 2</span>
+            </div>
+            <div class="light_slider">
+              <img src="/src/icons/iconoir_sun-light.svg"></img>
+              <input type="range" min="0" max="100" value="0" name="" id="">
+              <img src="/src/icons/iconoir_sun-light-1.svg"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid_header">Комната 2</div>
+    <div class="room_line">
+      <div class="temp_props props">
+        <div class="temp_prop temp">
+          <img src="/src/icons/mdi_temperature.svg"></img>
+          <span>28.7</span>
+        </div>
+        <div class="temp_prop humidity">
+          <img src="/src/icons/humidity.svg" ></img>
+          <span>65.4%</span>
+        </div>
+        <div class="temp_prop co2">
+          <img src="/src/icons/material-symbols_cloud.svg"></img>
+          <span>615 ppm</span>
+        </div>
+        <div class="temp_prop power">
+          <img src="/src/icons/Frame 22361.svg"></img>
+          <span>4W</span>
+        </div>
+        <div class="temp_prop light">
+          <img src="/src/icons/healthicons_electricity-outline.svg"></img>
+          <span>0W</span>
+        </div>
+      </div>
+
+      <div class="room_prop room_temp">
+        <span class="room_prop_header">Температура</span>
+        <div class="room_device conditioner device_off">
+          <div class="device_value">
+            <img src="/src/icons/mdi_temperature.svg"></img>
+            <input type="text">
+          </div>
+          <span>Кондиционер</span>
+          <a href="#">ВЫКЛ</a>
+        </div>
+      </div>
+
+      <div class="room_prop room_extractor">
+        <span class="room_prop_header">Воздух</span>
+        <div class="room_device conditioner device_on">
+          <div class="device_value">
+            <img src="/src/icons/material-symbols_cloud.svg"></img>
+          </div>
+          <span>Вытяжка</span>
+          <a href="#">ВКЛ</a>
+        </div>
+      </div>
+
+      <div class="room_prop room_light">
+        <span class="room_prop_header">Свет</span>
+
+        <div class="lightswitch_container">
+          <div class="room_device lightswitch device_on">
+            <div class="device_value">
+              <img src="/src/icons/healthicons_electricity-outline.svg"></img>
+              <span>Свет 1</span>
+            </div>
+            <div class="light_slider">
+              <img src="/src/icons/iconoir_sun-light.svg"></img>
+              <input type="range" min="0" max="100" name="" id="">
+              <img src="/src/icons/iconoir_sun-light-1.svg"></img>
+            </div>
+          </div>
+          <div class="room_device lightswitch device_off">
+            <div class="device_value">
+              <img src="/src/icons/healthicons_electricity-outline.svg"></img>
+              <span>Свет 2</span>
+            </div>
+            <div class="light_slider">
+              <img src="/src/icons/iconoir_sun-light.svg"></img>
+              <input type="range" min="0" max="100" value="0" name="" id="">
+              <img src="/src/icons/iconoir_sun-light-1.svg"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 
@@ -159,6 +501,6 @@
   </div>
 </div>
 <!-- partial -->
-  
+<script src="/src/script.js" type="js"></script>
 </body>
 </html>
