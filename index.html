@@ -41,7 +41,7 @@
     </div>
 
     <div class="grid-item item-2 w300">
-      <div class="grid_header">Статусы членов семьи</div>
+      <div class="grid_header">Статусы членов семьи</div>
       <div class="family_status">
         <div class="family_person online">
           <img src="/src/icons/avatar.svg"></img>
@@ -62,13 +62,100 @@
       </div>
     </div>
 
-    <div class="grid-item item-3 w300">Ссылки</div>
+    <a class="grid-item grid-link" href="#" >
+      <img src="/src/icons/telegram.svg"></img>
+      <span>Telegram-бот</span>
+    </a>
+
+    <a class="grid-item grid-link" href="#">
+      <img src="/src/icons/camera.svg"></img>
+      <span>Фото посетителей</span>
+    </a>
 
   </div>
-  <div class="grid-item item-4">Комнаты</div>
+
+  <div class="grid-item item-4">
+    <div class="grid_header">Гостинная</div>
+
+    <div class="room_line">
+
+      <div class="temp_props props">
+        <div class="temp_prop temp">
+          <img src="/src/icons/mdi_temperature.svg"></img>
+          <span>28.7</span>
+        </div>
+        <div class="temp_prop humidity">
+          <img src="/src/icons/humidity.svg" ></img>
+          <span>65.4%</span>
+        </div>
+        <div class="temp_prop co2">
+          <img src="/src/icons/material-symbols_cloud.svg"></img>
+          <span>615 ppm</span>
+        </div>
+        <div class="temp_prop power">
+          <img src="/src/icons/Frame 22361.svg"></img>
+          <span>4W</span>
+        </div>
+        <div class="temp_prop light">
+          <img src="/src/icons/healthicons_electricity-outline.svg"></img>
+          <span>0W</span>
+        </div>
+      </div>
+
+      <div class="room_prop room_temp">
+        <span class="room_prop_header">Температура</span>
+        <div class="room_device conditioner device_off">
+          <div class="device_value">
+            <img src="/src/icons/mdi_temperature.svg"></img>
+            <input type="text">
+          </div>
+          <span>Кондиционер</span>
+          <a href="#">ВЫКЛ</a>
+        </div>
+      </div>
+
+      <div class="room_prop room_extractor">
+        <span class="room_prop_header">Воздух</span>
+        <div class="room_device conditioner device_on">
+          <div class="device_value">
+            <img src="/src/icons/material-symbols_cloud.svg"></img>
+          </div>
+          <span>Вытяжка</span>
+          <a href="#">ВКЛ</a>
+        </div>
+      </div>
+
+      <div class="room_prop room_light">
+        <span class="room_prop_header">Свет</span>
+        <div class="room_device conditioner device_on">
+          <div class="device_value">
+            <img src="/src/icons/material-symbols_cloud.svg"></img>
+          </div>
+          <span>Вытяжка</span>
+          <a href="#">ВКЛ</a>
+        </div>
+      </div>
+
+    </div>
+    
+
+  </div>
+
   <div class="grid-3">
-    <div class="grid-item item-5">Камера 1</div>
-    <div class="grid-item item-6">Камера 2</div>
+    <div class="grid-item grid_cam cam1">
+      <div class="cam_label">
+        <img src="/src/icons/cam1.svg" alt="">
+        <span>Камера 1</span>
+      </div>
+    </div>
+
+    <div class="grid-item grid_cam cam2">
+      <div class="cam_label">
+        <img src="/src/icons/cam1.svg" alt="">
+        <span>Камера 2</span>
+      </div>
+    </div>
+
   </div>
 </div>
 <!-- partial -->
