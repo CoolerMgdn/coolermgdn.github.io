@@ -81,6 +81,7 @@ body {
 .temp_value {
   font-size: 48px;
   margin-bottom: 10px;
+  font-weight: 500;
 }
 .temp_value:after {
   content: "\00B0";
@@ -125,5 +126,27 @@ body {
 .temp_prop {
   display: flex;
   align-items: center;
-  column-gap: 5px;
+  column-gap: 10px;
+}
+.grid_header {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+.family_status {
+  display: flex;
+  flex-direction: row;
+  &.family_person {
+    display: inline-flex;
+    padding: 10px 20px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.10);
+    font-size: 16px;
+  }
+  &.offline {
+    opacity: 0.3 !important;
+  }
 }
