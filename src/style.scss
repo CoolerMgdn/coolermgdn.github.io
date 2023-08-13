@@ -138,7 +138,7 @@ body {
 .family_status {
   display: flex;
   flex-direction: row;
-  &.family_person {
+  .family_person {
     display: inline-flex;
     padding: 10px 20px;
     align-items: center;
@@ -147,7 +147,7 @@ body {
     background: rgba(255, 255, 255, 0.10);
     font-size: 16px;
   }
-  &.offline {
+  .offline {
     opacity: 0.3 !important;
   }
 }

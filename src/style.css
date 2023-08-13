@@ -223,7 +223,7 @@ body {
           flex-direction: row;
 }
 
-.family_status.family_person {
+.family_status .family_person {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -237,7 +237,7 @@ body {
   font-size: 16px;
 }
 
-.family_status.offline {
+.family_status .offline {
   opacity: 0.3 !important;
 }
 /*# sourceMappingURL=style.css.map */
