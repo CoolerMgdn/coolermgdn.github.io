@@ -66,15 +66,41 @@ $(function () {
     $(".pop-up").removeClass("visible");
    });
    
-   const toggleButton = document.querySelector('.dark-light');
+   //const toggleButton = document.querySelector('.dark-light');
    
-   toggleButton.addEventListener('click', () => {
-     document.body.classList.toggle('light-mode');
-   });
+   //toggleButton.addEventListener('click', () => {
+     //document.body.classList.toggle('light-mode');
+   //});
    
-
-   $('.lightswitch').click(function() {
-    $(this).toggleClass('device_off device_on');
+   //Вкл/выкл свет
+   $('.lightswitch .device_value').click(function() {
+    $(this).parent('.lightswitch').toggleClass('device_off device_on');
   });
-  console.log(Привет)
+
+  //Свитчи
+  $('.room_device .toggle').click(function() {
+    $(this).parent('.room_device').toggleClass('device_off device_on');
+    //$(this).toggleClass('active');
+  });
+
+  $(document).ready(function() {
+    function toggleDevice() {
+      $('.room_device').each(function() {
+        if ($(this).hasClass('device_off')) {
+          $(this).children('.toggle').removeClass('active');
+        } else if ($(this).hasClass('device_on')) {
+          $(this).children('.toggle').addClass('active');
+        }
+      });
+    }
+  
+    toggleDevice();
+  
+    $('.toggle').click(function() {
+      toggleDevice();
+    });
+  });
+  
+  
+  
   
