@@ -56,7 +56,7 @@ body {
   -ms-grid-columns: (auto)[6];
       grid-template-columns: repeat(6, auto);
   width: 97vw;
-  height: 90vh;
+  height: 87vh;
   padding: 20px;
 }
 
@@ -121,7 +121,8 @@ body {
   -ms-grid-column-span: 3;
   grid-area: 1 / 2 / 4 / 5;
   overflow-y: scroll;
-  width: 100%;
+  width: auto;
+  min-width: 400px;
 }
 
 .grid-item.item-5 {
@@ -216,6 +217,8 @@ body {
           column-gap: 1rem;
   row-gap: 1rem;
   max-width: 300px;
+  min-width: 275px;
+  overflow-y: scroll;
 }
 
 .temp_prop {
@@ -457,10 +460,13 @@ body {
   -webkit-column-gap: 1rem;
           column-gap: 1rem;
   row-gap: 1rem;
+  width: 100%;
+  max-width: 400px;
 }
 
 .grid-3 .grid_cam {
-  height: 200px;
+  max-height: 200px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -480,7 +486,6 @@ body {
       flex-shrink: 0;
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.1);
-  width: 400px;
   background-position: center;
   background-size: contain;
   -webkit-transition: all 0.3s ease-in-out;
@@ -842,5 +847,14 @@ input[type="range"]::-webkit-slider-thumb:active {
 
 .wide .menu-circle {
   margin-right: 0;
+}
+
+@media screen and (min-width: 960px) and (max-width: 1200px) {
+  .grid_header {
+    font-size: 24px;
+  }
+  .temp_value {
+    font-size: 36px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

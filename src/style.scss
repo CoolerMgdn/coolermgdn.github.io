@@ -53,7 +53,7 @@ body {
   grid-template-rows: repeat(3, auto);
   grid-template-columns: repeat(6, auto);
   width: 97vw;
-  height: 90vh;
+  height: 87vh;
   padding: 20px;
 }
 
@@ -86,7 +86,8 @@ body {
   &.item-4 {
     grid-area: 1 / 2 / 4 / 5;
     overflow-y: scroll;
-    width: 100%;
+    width: auto;
+    min-width: 400px;
   }
 
   &.item-5 {
@@ -144,6 +145,8 @@ body {
   column-gap: 1rem;
   row-gap: 1rem;
   max-width: 300px;
+  min-width: 275px;
+  overflow-y: scroll;
 }
 .temp_prop {
   display: flex;
@@ -298,8 +301,11 @@ body {
   flex-direction: column;
   column-gap: 1rem;
   row-gap: 1rem;
+  width: 100%;
+  max-width: 400px;
   .grid_cam {
-    height: 200px;
+    max-height: 200px;
+    height: 100%;
     display: flex;
     padding: 20px;
     flex-direction: column;
@@ -309,7 +315,6 @@ body {
     flex-shrink: 0;
     border-radius: 30px;
     background: rgba(255, 255, 255, 0.10);
-    width: 400px;
     background-position: center;
     background-size: contain;
     -webkit-transition: all 0.3s ease-in-out;
@@ -571,5 +576,14 @@ input[type="range"]::-webkit-slider-thumb {
   }
   .menu-circle {
    margin-right: 0;
+  }
+ }
+
+ @media screen and (min-width:960px) and (max-width:1200px) {
+  .grid_header {
+    font-size: 24px;
+  }
+  .temp_value {
+    font-size: 36px;
   }
  }

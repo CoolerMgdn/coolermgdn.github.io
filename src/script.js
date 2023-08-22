@@ -71,3 +71,10 @@ $(function () {
    toggleButton.addEventListener('click', () => {
      document.body.classList.toggle('light-mode');
    });
+   
+
+   $('.lightswitch').click(function() {
+    $(this).toggleClass('device_off device_on');
+  });
+  console.log(Привет)
+  
